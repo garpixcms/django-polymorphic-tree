@@ -34,7 +34,7 @@ def find_version(*parts):
 
 
 setup(
-    name='django-polymorphic-tree',
+    name='django-polymorphic-tree-for-garpix-page',
     version=find_version('polymorphic_tree', '__init__.py'),
     license='Apache 2.0',
 
@@ -53,8 +53,8 @@ setup(
     author='Diederik van der Boor',
     author_email='opensource@edoburu.nl',
 
-    url='https://github.com/django-polymorphic/django-polymorphic-tree',
-    download_url='https://github.com/django-polymorphic/django-polymorphic-tree/zipball/master',
+    url='https://github.com/garpixcms/django-polymorphic-tree',
+    download_url='https://github.com/garpixcms/django-polymorphic-tree/zipball/master',
 
     packages=find_packages(),
     include_package_data=True,
@@ -77,6 +77,7 @@ setup(
         'Framework :: Django :: 1.10',
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
+        'Framework :: Django :: 3.0',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules',

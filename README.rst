@@ -9,8 +9,10 @@
 .. image:: https://img.shields.io/codecov/c/github/django-polymorphic/django-polymorphic-tree/master.svg
     :target: https://codecov.io/github/django-polymorphic/django-polymorphic-tree?branch=master
 
-django-polymorphic-tree
-=======================
+django-polymorphic-tree-for-garpix-page
+=======================================
+
+Forked from theConscience/django-polymorphic-tree
 
 This package combines django-mptt_ with django-polymorphic_.
 You can write Django models that form a tree structure where each node can be a different model type.
@@ -34,11 +36,7 @@ Installation
 
 First install the module, preferably in a virtual environment::
 
-    pip install django-polymorphic-tree
-
-Or install the current repository::
-
-    pip install -e git+https://github.com/django-polymorphic/django-polymorphic-tree.git#egg=django-polymorphic-tree
+    pip install django-polymorphic-tree-for-garpix-page
 
 The main dependencies are django-mptt_ and django-polymorphic_,
 which will be automatically installed.
