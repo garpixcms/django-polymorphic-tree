@@ -119,3 +119,27 @@ ul.tree li img { vertical-align: baseline; }  /* keeps 3px space below, use 'bot
 ul.tree .no-js { display: none; }
 ul.tree li:first-child .move-up { visibility: hidden; }  /* Hiding in CSS is easy, the server-side urlnode.is_first_sibling call is expensive. */
 ul.tree li:last-child .move-down { visibility: hidden; }
+
+ul.tree li>div{
+	display: flex;
+	align-items: center;
+}
+
+ul.tree li>div>input{
+	float: left;
+}
+
+.jqtree-django .col-primary {
+  width: 20% !important;
+}
+
+.jqtree-django .col-metadata {
+  width: 80% !important;
+	display: flex;
+	justify-content: space-around;
+}
+
+.jqtree-django .col-metadata div{
+	width: auto!important;
+}
+
