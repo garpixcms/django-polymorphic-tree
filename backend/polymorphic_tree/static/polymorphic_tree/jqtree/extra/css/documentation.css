@@ -1,0 +1,144 @@
+/* main layout */
+#sidebar {
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px 0 30px 30px;
+    border-right: 1px solid #bbb;
+    box-shadow: 0 0 20px #ccc;
+    -webkit-box-shadow: 0 0 20px #ccc;
+    -moz-box-shadow: 0 0 20px #ccc;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#page {
+    width: 700px;
+    margin: 0 0 50px 260px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* sidebar */
+#sidebar a {
+    color: #000;
+}
+
+#sidebar ul.first  {
+    list-style: none;
+}
+
+#sidebar ul  {
+    margin-left: 0;
+}
+
+#sidebar ul.first > li {
+    margin-bottom: 1em;
+}
+
+#sidebar ul.first > li > a {
+    font-weight: bold;
+}
+
+/* page */
+.container-left,
+.container-right {
+	float: left;
+	width: 50%;
+}
+
+.container-left .inner {
+	margin-right: 0.5em;
+}
+
+.container-right .inner {
+	margin-left: 0.5em;
+}
+
+/* header */
+h1 {
+	color: #C7518C;
+	font-family: 'Corben', arial, serif;
+	font-size: 55px;
+	margin: 0.5em 0;
+}
+
+h1 span {
+	background-color: #F35EA1;
+}
+
+h1 span.char1,
+h1 span.char2 {
+	color: #75CBC6;
+	background-color: #fff;
+}
+
+h1 span.char2 {
+	padding-right: 0.1em;
+}
+
+h1 span.char3 {
+	padding-left: 0.1em;
+}
+
+h1 span.char6 {
+	padding-right: 0.1em;
+}
+
+/* general style */
+h4 {
+	font-size: 1.2em;
+	margin: 0.5em 0 0.2em 0;
+	color: #777;
+	font-family: 'Helvetica', Arial, sans-serif;
+}
+
+h5 {
+	font-size: 0.9em;
+	margin: 1em 0 0.5em 0;
+	background-color: #333;
+	color: #fff;
+	display: inline;
+	padding: 0.2em 0.5em 0.1em 0.5em;
+	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+a,
+a:visited {
+	color: #b2497e;
+}
+
+img {
+	margin: 0 0.5em;
+}
+
+/* tree */
+.tree a:hover {
+	border-bottom: none;
+}
+
+#tree1 {
+	border: solid 1px #666;
+	padding: 1em;
+}
+
+/* code */
+.syntaxhighlighter {
+	padding-bottom: 0.2em;
+}
+
+.syntaxhighlighter .container {
+	padding: 1em;
+}
+
+.syntaxhighlighter {
+	margin: 0.5em 0 1em 0;
+	border-left: solid 6px #aaa;
+}
+
+.syntaxhighlighter.dark {
+	border-left: none;
+	margin: 0 0 1em 0;
+}

@@ -127,6 +127,7 @@ ul.tree li>div{
 
 ul.tree li>div>input{
 	float: left;
+    margin-left: 10px;
 }
 
 .jqtree-django .col-primary {
