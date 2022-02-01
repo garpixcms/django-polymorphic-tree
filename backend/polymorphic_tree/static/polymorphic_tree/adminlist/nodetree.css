@@ -144,3 +144,9 @@ ul.tree li>div>input{
 	width: auto!important;
 }
 
+ul.tree ul div.col-metadata {
+  margin-left: -12px;
+}
+.js-tree-header th {
+  text-align: center;
+}
