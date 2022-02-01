@@ -15,6 +15,7 @@ class NodeAdmin(PolymorphicMPTTParentModelAdmin):
     """
     base_model = Node
     child_models = [NodeChild1, NodeChild2]
+    list_per_page = 2
 
     empty_value_display = '- нет -'
     save_on_top = True
@@ -27,7 +28,7 @@ class NodeAdmin(PolymorphicMPTTParentModelAdmin):
     # list_filter = (PolymorphicChildModelFilter, 'is_active', 'created_at', 'updated_at', 'sites')
     # actions = ('clone_object', 'rebuild')
     #
-    # list_display = ('title', 'created_at', 'is_active', 'get_absolute_url_html', 'model_name')
+    list_display = ('title', 'created_at', 'updated_at')
     # list_editable = ('is_active',)
     #
     # readonly_fields = ('created_at', 'updated_at', 'model_name')
