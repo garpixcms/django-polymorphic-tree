@@ -46,13 +46,13 @@ class AdminListRecurseTreeNode(Node):
         parser.delete_first_token()
         return cls(template_nodes, cl_var)
 
-    def _render_node(self, context, cl, node):
+    def _render_node(self, context, cl, node, level=0):
         bits = []
         context.push()
 
         # Render children to add to parent later
         for child in node.get_children():
-            bits.append(self._render_node(context, cl, child))
+            bits.append(self._render_node(context, cl, child, level=level+1))
 
         columns = self._get_column_repr(cl, node)  # list(tuple(name, html), ..)
         first_real_column = next(col for col in columns if col[0] != 'action_checkbox')
@@ -64,6 +64,8 @@ class AdminListRecurseTreeNode(Node):
         context['node'] = node
         context['change_url'] = cl.url_for_result(node)
         context['children'] = mark_safe(u''.join(bits))
+        context['level'] = level
+        context['margin_left'] = -level * 12
 
         # Render
         rendered = self.template_nodes.render(context)

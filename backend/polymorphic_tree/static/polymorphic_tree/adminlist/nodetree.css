@@ -131,11 +131,13 @@ ul.tree li>div>input{
 }
 
 .jqtree-django .col-primary {
-  width: 20% !important;
+  /*width: 20% !important;*/
+  min-width: 200px !important;
+  width: 200px !important;
 }
 
 .jqtree-django .col-metadata {
-  width: 80% !important;
+  width: 100% !important;
 	display: flex;
 	justify-content: space-around;
 }
@@ -144,9 +146,19 @@ ul.tree li>div>input{
 	width: auto!important;
 }
 
-ul.tree ul div.col-metadata {
-  margin-left: -12px;
-}
 .js-tree-header th {
   text-align: center;
+}
+
+.col-action_checkbox + th {
+  width: 216px !important;
+  min-width: 216px !important;
+}
+
+.jqtree-django .col-primary, .jqtree-django .col-metadata {
+  height: auto !important;
+}
+
+.jqtree-django ul.tree {
+  background-image: none !important;
 }
