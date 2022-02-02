@@ -75,7 +75,7 @@ class AdminListRecurseTreeNode(Node):
     def render(self, context):
         cl = self.cl_var.resolve(context)
         assert isinstance(cl, ChangeList), "cl variable should be an admin ChangeList"  # Also assists PyCharm
-        roots = get_tree(cl.result_list)
+        roots = cache_tree_children(cl.result_list)
         bits = [self._render_node(context, cl, node) for node in roots]
         return ''.join(bits)
 

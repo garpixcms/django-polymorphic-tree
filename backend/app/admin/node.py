@@ -28,7 +28,7 @@ class NodeAdmin(PolymorphicMPTTParentModelAdmin):
     # list_filter = (PolymorphicChildModelFilter, 'is_active', 'created_at', 'updated_at', 'sites')
     # actions = ('clone_object', 'rebuild')
     #
-    list_display = ('title', 'created_at', 'updated_at')
+    list_display = ('title', 'created_at', 'updated_at', 'parent')
     # list_editable = ('is_active',)
     #
     # readonly_fields = ('created_at', 'updated_at', 'model_name')
