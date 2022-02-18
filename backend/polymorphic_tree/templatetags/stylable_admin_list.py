@@ -302,7 +302,10 @@ def display_for_field(value, field, empty_value_display):
         return empty_value_display
     elif isinstance(field, models.DateField) or isinstance(field, models.TimeField):
         if isinstance(field, models.DateTimeField):
-            value = timezone.localtime(value)
+            try:
+                value = timezone.localtime(value)
+            except:
+                pass
         return formats.localize(value)
     elif isinstance(field, models.DecimalField):
         return formats.number_format(value, field.decimal_places)
