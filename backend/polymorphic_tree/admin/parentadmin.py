@@ -3,14 +3,14 @@ import sys
 from distutils.version import StrictVersion
 
 from django.conf import settings
-from django.conf.urls import url
+from django.urls import re_path as url
 from django.contrib.auth import get_permission_codename
 from django.contrib.admin import SimpleListFilter
 from django.core.exceptions import ValidationError
 from django.db import transaction
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
-from django.utils.translation import ugettext_lazy as _, ugettext
+from django.utils.translation import gettext_lazy as _, gettext
 from future.builtins import int, str
 from mptt.admin import MPTTModelAdmin
 from mptt.exceptions import InvalidMove
@@ -163,7 +163,7 @@ class PolymorphicMPTTParentModelAdmin(PolymorphicParentModelAdmin, MPTTModelAdmi
             return HttpResponse(json.dumps({
                 'action': 'reject',
                 'moved_id': moved_id,
-                'error': ugettext('You do not have permission to move this node.')
+                'error': gettext('You do not have permission to move this node.')
             }), content_type='application/json', status=409)
 
         # Compare on strings to support UUID fields.

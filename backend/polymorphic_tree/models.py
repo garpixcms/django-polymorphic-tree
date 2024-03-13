@@ -234,7 +234,7 @@ class PolymorphicMPTTModel(with_metaclass(PolymorphicMPTTModelBase, MPTTModel, P
             parent = getattr(self, self._mptt_meta.parent_attr) if parent_id else None
             self.validate_move(parent)
         except InvalidMove as e:
-            raise ValidationError({self._mptt_meta.parent_attr: force_text(e)})
+            raise ValidationError({self._mptt_meta.parent_attr: force_str(e)})
 
 
 def _get_new_parent(moved, target, position='first-child'):
